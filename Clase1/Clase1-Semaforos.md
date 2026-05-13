@@ -18,6 +18,10 @@ Capitulo de procesos e hilos, especificamente en el tema de:
 
 Si no hay control -> corrupción de datos 
 <pre>
-errores inesperados en los archivos informáticos que ocurren durante la escritura, lectura, almacenamiento o tranmisión, provocando cambios no deseados
-en la información original. Esto provoca que los datos sean ilegibles, inutilizables o se comportan de manera errónea, sin que el archivo desaparezca por completo.**
+Errores inesperados en los archivos informáticos que ocurren durante la escritura, lectura, almacenamiento o tranmisión, provocando cambios no deseados
+en la información original. Esto provoca que los datos sean ilegibles, inutilizables o se comportan de manera errónea, sin que el archivo desaparezca por completo.
 </pre>
+
+# Problema previo: Lost Wakeup
+Antés de los semáforos,se usaba:
+- ```sleep``` ```wakeup```
