@@ -25,3 +25,5 @@ en la información original. Esto provoca que los datos sean ilegibles, inutiliz
 # Problema previo: Lost Wakeup
 Antés de los semáforos,se usaba:
 - ```sleep``` ```wakeup```
+
+**Problema crítico:** Si un proceso hace ```wakeup``` antes que el otro haga ```sleep```, la señal se pierde.
