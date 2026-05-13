@@ -16,5 +16,8 @@ Capitulo de procesos e hilos, especificamente en el tema de:
 - Consumidor que lo saca
 - Ambos acceden al mismo espacio de memoria
 
-Si no hay control -> corrupción de datos **errores inesperados en los archivos informáticos que ocurren durante la escritura, lectura, almacenamiento o tranmisión, provocando cambios no deseados
+Si no hay control -> corrupción de datos 
+<pre>
+errores inesperados en los archivos informáticos que ocurren durante la escritura, lectura, almacenamiento o tranmisión, provocando cambios no deseados
 en la información original. Esto provoca que los datos sean ilegibles, inutilizables o se comportan de manera errónea, sin que el archivo desaparezca por completo.**
+</pre>
