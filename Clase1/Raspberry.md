@@ -384,3 +384,425 @@ Por eso es un laboratorio ideal para:
 3. ¿Por qué Linux es considerado portable?
 4. ¿Qué problemas aparecen cuando la RAM es limitada?
 5. ¿Qué parte del SO interactúa directamente con el hardware?
+
+
+Raspberry Pi en Sistemas Operativos
+Aplicaciones Académicas y Técnicas
+
+------------------------------------------------------------
+
+1️⃣ Laboratorio de Kernel Linux
+❓ ¿Qué es?
+
+Usar la Raspberry Pi para estudiar y experimentar con el núcleo del sistema operativo (kernel).
+
+Recuerda:
+El kernel es el que controla:
+
+CPU
+Memoria
+Procesos
+Dispositivos
+⚙️ ¿Cómo se usa en la práctica?
+
+En Raspberry Pi puedes:
+
+Compilar tu propio kernel Linux para ARM.
+Modificar módulos.
+Activar o desactivar drivers.
+Probar cambios reales en hardware físico.
+🧠 ¿Qué aprendes?
+Cómo el kernel detecta hardware.
+Cómo se cargan drivers.
+Cómo se gestionan interrupciones.
+Cómo se programa a bajo nivel.
+🧩 Ejemplo
+
+Cambias la política de planificación del kernel.
+Recompilas.
+Reinicias la Raspberry.
+Observas cómo cambian los tiempos de respuesta.
+
+Eso es laboratorio real.
+
+2️⃣ Experimentos de planificación de procesos
+❓ ¿Qué es planificación?
+
+Es decidir:
+
+¿Qué proceso usa la CPU y por cuánto tiempo?
+
+⚙️ ¿Cómo lo pruebas en Raspberry Pi?
+
+Puedes:
+
+Crear múltiples procesos.
+Medir tiempos de espera.
+Analizar uso de CPU con top.
+Cambiar prioridades con nice.
+🧠 ¿Qué se aprende?
+Round Robin
+Prioridades
+Starvation
+Context switch
+Uso eficiente de CPU
+🧩 Ejemplo
+
+Ejecutas:
+
+yes > /dev/null
+
+Varias veces.
+
+Creas carga artificial.
+
+Observas cómo el scheduler reparte CPU.
+
+Eso es teoría aplicada.
+
+3️⃣ Sistemas Embebidos
+❓ ¿Qué es un sistema embebido?
+
+Es un sistema que:
+
+Está dedicado a una tarea específica.
+No es una PC general.
+Está integrado en un dispositivo.
+
+Ejemplos:
+
+Robot
+Control industrial
+Sistema domótico
+⚙️ ¿Cómo Raspberry Pi se usa aquí?
+
+Porque:
+
+Es pequeña.
+Consume poca energía.
+Tiene GPIO (pines físicos).
+Corre Linux.
+🧠 ¿Qué se aprende?
+Sistemas en tiempo real.
+Interacción hardware–software.
+Drivers.
+Manejo de sensores.
+🧩 Ejemplo
+
+Conectas un sensor de temperatura.
+El sistema operativo recibe la señal.
+Un proceso decide encender un ventilador.
+
+Eso es SO interactuando con mundo físico.
+
+4️⃣ Servidor Web Casero
+❓ ¿Qué es?
+
+Usar Raspberry Pi como servidor:
+
+Apache
+Nginx
+Node.js
+⚙️ ¿Cómo funciona?
+Instalas servidor web.
+Abres puerto 80.
+La Raspberry responde peticiones HTTP.
+🧠 ¿Qué se aprende?
+Gestión de procesos servidor.
+Concurrencia.
+Uso de sockets.
+Administración de memoria bajo carga.
+🧩 Ejemplo
+
+10 personas entran a tu página.
+
+El SO debe:
+
+Crear procesos o hilos.
+Administrar memoria.
+Gestionar red.
+
+Eso es práctica directa de IPC y planificación.
+
+5️⃣ Firewall
+❓ ¿Qué es un firewall?
+
+Es un sistema que:
+
+Filtra tráfico de red.
+Decide qué entra y qué sale.
+⚙️ ¿Cómo Raspberry Pi actúa como firewall?
+
+Se instala Linux + iptables o nftables.
+
+La Raspberry:
+
+Analiza paquetes.
+Aplica reglas.
+Bloquea accesos.
+🧠 ¿Qué se aprende?
+Redes en SO.
+Manejo de sockets.
+Seguridad.
+Gestión de paquetes.
+🧩 Ejemplo
+
+Regla:
+
+sudo iptables -A INPUT -p tcp --dport 22 -j DROP
+
+Bloqueas acceso SSH.
+
+Eso es el sistema operativo filtrando tráfico.
+
+6️⃣ Nodo de Red
+❓ ¿Qué es un nodo?
+
+Un dispositivo que forma parte de una red.
+
+Puede ser:
+
+Router
+Switch
+Servidor
+Cliente
+⚙️ ¿Cómo Raspberry Pi funciona como nodo?
+
+Puede actuar como:
+
+Servidor DNS
+Proxy
+Router WiFi
+Cliente en cluster
+🧠 ¿Qué se aprende?
+Comunicación entre procesos.
+Protocolos de red.
+Distribución de carga.
+Computación distribuida.
+🧩 Ejemplo avanzado
+
+Clusters de cientos de Raspberry Pi se usan para probar programas destinados a supercomputadoras.
+
+Eso significa:
+
+Muchas máquinas pequeñas trabajando juntas.
+
+Aprendes:
+
+Sincronización distribuida.
+Comunicación por red.
+Gestión remota.
+🎯 Integración Final
+
+Raspberry Pi sirve en Sistemas Operativos porque permite experimentar con:
+
+Kernel
+Planificación
+Memoria
+Redes
+Seguridad
+Sistemas embebidos
+Computación distribuida
+
+Es un laboratorio real, barato y físico.
+
+🧠 Pregunta clave para examen
+
+¿Por qué Raspberry Pi es ideal para estudiar Sistemas Operativos?
+
+Porque permite experimentar con hardware real, arquitectura ARM y Linux en un entorno controlado y de bajo costo.
+
+
+1️⃣ ¿Qué diferencia hay entre Raspberry Pi y Raspberry Pi Pico?
+❓ ¿Qué es Raspberry Pi (normal)?
+
+Es una microcomputadora completa.
+
+Tiene:
+
+CPU
+RAM
+Sistema operativo
+HDMI
+USB
+Red
+Puede ejecutar Linux
+
+Ejemplo: Raspberry Pi 4 o 5 puede correr Raspberry Pi OS (Linux) .
+
+Es como una mini PC.
+
+❓ ¿Qué es Raspberry Pi Pico?
+
+Es un microcontrolador, no una computadora completa .
+
+Eso significa:
+
+No ejecuta un sistema operativo como Linux.
+Ejecuta programas directamente.
+Se usa para controlar hardware físico.
+🎯 Diferencia clave
+Raspberry Pi	Raspberry Pi Pico
+Corre Linux	No corre Linux
+Multitarea	Programa único
+Tiene sistema operativo	No necesita SO complejo
+Mini PC	Microcontrolador
+🧠 En términos de SO
+
+Raspberry Pi → Estudias procesos, memoria, kernel.
+Raspberry Pi Pico → Estudias programación embebida sin SO complejo.
+
+2️⃣ ¿Por qué usa arquitectura ARM y no x86?
+❓ ¿Qué es ARM?
+
+Es una arquitectura de procesador eficiente y de bajo consumo.
+
+Los modelos usan CPU ARM Cortex (A53, A72, A76) .
+
+❓ ¿Qué es x86?
+
+Arquitectura tradicional de PCs (Intel, AMD).
+
+Consume más energía.
+Es más compleja.
+
+❓ ¿Por qué ARM en Raspberry Pi?
+
+Porque:
+
+Consume menos energía.
+Genera menos calor.
+Es más barata.
+Ideal para dispositivos pequeños.
+🧠 En Sistemas Operativos
+
+El SO debe estar compilado para la arquitectura correcta.
+
+No puedes instalar Windows tradicional (x86) en Raspberry Pi (ARM).
+
+Eso demuestra:
+
+El sistema operativo depende del hardware.
+
+3️⃣ ¿Cómo influye la cantidad de RAM en el rendimiento del sistema operativo?
+
+Esta es muy importante.
+
+❓ ¿Qué hace la RAM?
+
+Guarda:
+
+Procesos en ejecución
+Datos temporales
+Caché
+❓ ¿Qué pasa si hay poca RAM?
+
+El sistema:
+
+Empieza a usar memoria virtual (swap).
+Se vuelve más lento.
+Hace más accesos al disco.
+
+Ejemplo:
+Raspberry Pi 1 tenía 512 MB .
+Raspberry Pi 4 puede tener hasta 8 GB .
+
+Más RAM → más procesos simultáneos → mejor rendimiento.
+
+🧠 En Sistemas Operativos
+
+La RAM afecta:
+
+Planificación
+Paginación
+Swapping
+Rendimiento global
+
+Si hay poca RAM:
+El SO debe gestionar memoria cuidadosamente.
+
+4️⃣ ¿Por qué es útil para estudiar planificación de procesos?
+❓ ¿Qué es planificación?
+
+Es decidir:
+
+¿Qué proceso usa la CPU y cuándo?
+
+❓ ¿Por qué Raspberry Pi es buena para esto?
+
+Porque:
+
+Corre Linux real.
+Tiene recursos limitados.
+Permite experimentar sin dañar una PC principal.
+
+Puedes:
+
+Crear múltiples procesos.
+Cambiar prioridades.
+Medir tiempos.
+Observar uso de CPU.
+🧠 En práctica
+
+Si ejecutas varios programas pesados, verás cómo el scheduler reparte CPU.
+
+Eso te permite entender:
+
+Round Robin
+Prioridades
+Starvation
+Context switching
+
+Es teoría convertida en práctica.
+
+5️⃣ ¿Cuál modelo sería mejor para montar un servidor pequeño?
+❓ ¿Qué necesita un servidor?
+Buena CPU
+Suficiente RAM
+Red rápida
+USB rápido (si hay almacenamiento externo)
+🔍 Comparación rápida
+
+Raspberry Pi 3:
+
+1 GB RAM
+Ethernet 100 Mbps
+
+Raspberry Pi 4:
+
+Hasta 8 GB RAM
+Ethernet Gigabit
+USB 3.0
+
+Raspberry Pi 5:
+
+CPU más potente
+Hasta 8 GB RAM
+Mejor rendimiento general
+🎯 Respuesta correcta
+
+Para servidor pequeño:
+
+👉 Raspberry Pi 4 o 5.
+
+Porque:
+
+Más RAM
+Mejor red
+Mejor CPU
+🧠 Integración final (lo que debes entender realmente)
+
+Estas preguntas no son solo datos.
+
+Evalúan si entendiste:
+
+Relación hardware–software.
+Arquitectura del sistema.
+Gestión de memoria.
+Planificación de CPU.
+Uso real del sistema operativo.
+
+Si puedes explicar esto con tus propias palabras,
+ya dominaste el tema.
+
+
