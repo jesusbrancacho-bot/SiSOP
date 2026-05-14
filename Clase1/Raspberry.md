@@ -144,3 +144,243 @@ Porque combina:
 Permite experimentar sin riesgo.
 
 
+
+--- 
+
+# 🧠 Arquitectura ARM
+
+## ❓ ¿Qué es ARM?
+
+ARM es un tipo de **arquitectura de procesador**.
+
+Es decir, es la forma en que está diseñado el CPU internamente.
+
+No todos los procesadores son iguales. Existen principalmente:
+
+- **x86** (Intel, AMD – PCs tradicionales)
+- **ARM** (Raspberry Pi, celulares, tablets)
+
+---
+
+## ❓ ¿Cómo es ARM?
+
+ARM está basado en el modelo:
+
+> RISC (Reduced Instruction Set Computer)
+
+Eso significa:
+
+- Instrucciones más simples  
+- Menor consumo energético  
+- Mayor eficiencia por watt  
+
+### 🧩 Ejemplo sencillo
+
+Un procesador **x86** es como una navaja suiza con 100 herramientas.  
+Un procesador **ARM** es como un kit optimizado con pocas herramientas, pero muy rápidas.
+
+---
+
+## ❓ ¿Por qué Raspberry Pi usa ARM?
+
+Porque:
+
+- Consume poca energía
+- Genera menos calor
+- Es más barato
+- Es ideal para sistemas embebidos
+
+Modelos como Raspberry Pi 3, 4 y 5 usan CPUs ARM Cortex (A53, A72, A76).
+
+---
+
+## ❓ ¿Por qué es importante en Sistemas Operativos?
+
+Porque el sistema operativo debe:
+
+- Compilarse específicamente para ARM
+- Manejar su conjunto de instrucciones
+- Adaptarse a su gestión de memoria
+
+No puedes instalar un Windows tradicional (x86) en una Raspberry Pi (ARM).
+
+---
+
+# 🌍 Compatibilidad Multiplataforma
+
+## ❓ ¿Qué significa multiplataforma?
+
+Significa que un sistema operativo o software puede funcionar en diferentes arquitecturas.
+
+Ejemplo:
+
+Linux puede correr en:
+
+- x86
+- ARM
+- RISC-V
+- PowerPC
+
+---
+
+## ❓ ¿Cómo logra Raspberry Pi esta compatibilidad?
+
+Porque usa principalmente:
+
+> Linux (Raspberry Pi OS basado en Debian)
+
+Linux es portable.
+
+Eso significa que el kernel puede adaptarse a distintos procesadores.
+
+Además puede ejecutar:
+
+- Ubuntu
+- Fedora
+- Gentoo
+- Kali Linux
+- FreeBSD
+- Windows IoT
+
+---
+
+## ❓ ¿Por qué es importante?
+
+Demuestra que el sistema operativo no depende de una sola arquitectura.
+
+Eso es **diseño modular**.
+
+Linux separa:
+
+- Código dependiente del hardware
+- Código independiente del hardware
+
+---
+
+# ⚙️ Adaptación de Kernels
+
+## ❓ ¿Qué es el kernel?
+
+El kernel es el núcleo del sistema operativo.
+
+Se encarga de:
+
+- Gestionar CPU
+- Gestionar memoria
+- Controlar dispositivos
+- Manejar procesos
+
+---
+
+## ❓ ¿Qué significa adaptar el kernel?
+
+Significa configurarlo para que funcione con un hardware específico.
+
+En Raspberry Pi, el kernel debe:
+
+- Reconocer CPU ARM
+- Manejar puertos GPIO
+- Controlar USB, Ethernet y WiFi
+- Manejar la GPU integrada
+
+No es el mismo kernel que el de una laptop.
+
+---
+
+## ❓ ¿Cómo se adapta?
+
+Mediante:
+
+- Compilación específica para ARM
+- Drivers específicos
+- Configuración del Device Tree
+
+---
+
+## ❓ ¿Por qué es importante en Sistemas Operativos?
+
+Porque demuestra que el SO:
+
+- No es universal
+- Debe comunicarse correctamente con el hardware
+
+Raspberry Pi es ideal para estudiar esto porque es:
+
+- Abierta
+- Accesible
+- Bien documentada
+
+---
+
+# 🧩 Gestión de Recursos en Hardware Limitado
+
+## ❓ ¿Qué significa hardware limitado?
+
+Comparado con una PC moderna:
+
+- Menos RAM
+- Menos potencia CPU
+- Menos almacenamiento
+
+Ejemplo:
+
+- Raspberry Pi 1: 512 MB RAM  
+- Raspberry Pi 4/5: hasta 8 GB RAM  
+
+---
+
+## ❓ ¿Qué debe hacer el sistema operativo?
+
+Administrar cuidadosamente:
+
+- Memoria
+- Procesos
+- Prioridades
+- Consumo energético
+
+---
+
+## ❓ ¿Cómo lo hace?
+
+1. Planificación eficiente de procesos
+2. Uso controlado de memoria virtual
+3. Gestión de caché
+4. Drivers optimizados
+5. Evitando procesos innecesarios
+
+---
+
+## ❓ ¿Por qué es importante?
+
+Porque obliga a diseñar sistemas eficientes.
+
+En una PC potente puedes desperdiciar recursos.  
+En Raspberry Pi no.
+
+Por eso es un laboratorio ideal para:
+
+- Estudiar planificación
+- Medir uso de CPU
+- Analizar swapping
+- Optimizar procesos
+
+---
+
+# 🎯 Resumen Integrador
+
+| Concepto | Idea Central |
+|----------|--------------|
+| Arquitectura ARM | CPU eficiente, bajo consumo, diferente a x86 |
+| Compatibilidad Multiplataforma | Linux puede adaptarse a múltiples arquitecturas |
+| Adaptación de Kernel | El núcleo del SO debe configurarse para el hardware específico |
+| Gestión en Hardware Limitado | El SO debe optimizar recursos escasos |
+
+---
+
+# 🧠 Preguntas para Verificar Comprensión
+
+1. ¿Por qué no puedes instalar cualquier Windows en Raspberry Pi?
+2. ¿Qué ventaja tiene ARM frente a x86 en consumo energético?
+3. ¿Por qué Linux es considerado portable?
+4. ¿Qué problemas aparecen cuando la RAM es limitada?
+5. ¿Qué parte del SO interactúa directamente con el hardware?
